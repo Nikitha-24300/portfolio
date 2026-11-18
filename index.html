@@ -2,303 +2,546 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nikitha | Portfolio</title>
+    <title>Lingapnor Nikitha | Computer Science Student &amp; Aspiring Software Engineer</title>
+    <meta name="description" content="Portfolio of Lingapnor Nikitha, a Computer Science and Engineering student in Hyderabad skilled in Java, Python, DSA and DBMS, building full-stack web and AI-powered applications.">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="color-scheme" content="dark">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Tiny inline favicon (avoids a missing favicon request) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3EN%3C/text%3E%3C/svg%3E">
 
+    <!-- Lets CSS know JavaScript is available, so content is never hidden without it -->
+    <script>document.documentElement.classList.add("js");</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/4b8b071b36.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Inline SVG icon sprite (replaces the external Font Awesome kit) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+        <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- NAVBAR -->
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary">
 
-    <nav>
+            <a class="brand" href="#home">Nikitha <span>Portfolio</span></a>
 
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
 
-        <h1>Nikitha</h1>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <h1>Portfolio</h1>
+        </nav>
+    </header>
 
+    <main id="main">
 
-        <ul>
+        <!-- HERO -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="container hero-grid">
 
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
+                <div class="hero-text">
+                    <h1 id="hero-title">Hi, I&rsquo;m Lingapnor Nikitha</h1>
 
-        </ul>
+                    <p class="hero-lead">
+                        Computer Science undergraduate with a strong foundation in Java, Python,
+                        Data Structures, and Database Management Systems. I enjoy building web
+                        applications, AI-powered solutions, and software projects that solve
+                        real-world problems. I am continuously improving my software development
+                        skills and exploring technologies across full-stack development and
+                        Generative AI.
+                    </p>
 
-    </nav>
+                    <div class="buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="CV.pdf" class="btn btn-outline" download>
+                            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+                            Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
 
-    <!-- HERO SECTION -->
+                    <ul class="hero-meta">
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                            Hyderabad, India
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
+                            <a href="#achievements">1st Place, ServiceNow Co-Innovation Day Hackathon 2026</a>
+                        </li>
+                    </ul>
+                </div>
 
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <img src="profile.jpg" class="profile-pic">
-
-            <h2>Hello, I'm</h2>
-
-            <h1>Lingapnor Nikitha</h1>
-
-            <p>
-                Computer Science Engineering student passionate about
-                Artificial Intelligence, Machine Learning, Django,
-                Operating Systems and solving real-world problems
-                through scalable software solutions.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#projects" class="btn">
-                    View Projects
-                </a>
-
-                <a href="CV.pdf" class="btn-secondary" download>
-                    Download CV
-                </a>
+                <div class="hero-photo">
+                    <img src="profile.jpg" class="profile-pic" width="728" height="824"
+                         alt="Portrait of Lingapnor Nikitha">
+                </div>
 
             </div>
+        </section>
 
-        </div>
+        <!-- ABOUT -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">About Me</h2>
 
-    </section>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I&rsquo;m a Computer Science and Engineering student at Vasavi College of
+                            Engineering, building on a diploma in Computer Science and Engineering
+                            from Government Polytechnic, Hyderabad. I enjoy software development,
+                            especially full-stack web development, and like turning ideas into
+                            working applications.
+                        </p>
+                        <p>
+                            My projects so far include an AI-powered research paper platform, a
+                            graph-based travel planner and a desktop course registration system.
+                            These projects, together with an AI internship at Intrainz, have given
+                            me hands-on practice with Java, Python, databases and backend APIs.
+                        </p>
+                        <p>
+                            I&rsquo;m particularly interested in AI and Generative AI applications,
+                            and I&rsquo;m continuing to build my problem-solving and DSA skills
+                            while learning modern development technologies.
+                        </p>
+                    </div>
 
-    <!-- SKILLS -->
+                    <dl class="glance">
+                        <div>
+                            <dt>Location</dt>
+                            <dd>Hyderabad, India</dd>
+                        </div>
+                        <div>
+                            <dt>Studying</dt>
+                            <dd>B.E. in Computer Science and Engineering, Vasavi College of Engineering (2025 &ndash; 2028)</dd>
+                        </div>
+                        <div>
+                            <dt>Interests</dt>
+                            <dd>Full-stack development, Generative AI, Data Structures and Algorithms</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
 
-    <section class="skills" id="skills">
+        <!-- SKILLS -->
+        <section class="section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title">Technical Skills</h2>
 
-        <h2>Technical Skills</h2>
+                <div class="skills-grid">
 
-        <div class="skills-container">
+                    <article class="skill-group reveal">
+                        <h3>Programming Languages</h3>
+                        <ul class="chips">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>C#</li>
+                        </ul>
+                    </article>
 
-            <div class="skill-card">Python</div>
-            <div class="skill-card">C</div>
-            <div class="skill-card">C++</div>
-            <div class="skill-card">Java</div>
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Django</div>
-            <div class="skill-card">Flask</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Machine Learning</div>
-            <div class="skill-card">DBMS</div>
-            <div class="skill-card">Operating Systems</div>
-            <div class="skill-card">DSA</div>
-            <div class="skill-card">Cloud Computing</div>
+                    <article class="skill-group reveal">
+                        <h3>Frontend Development</h3>
+                        <ul class="chips">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>React.js <span class="level">Basics</span></li>
+                        </ul>
+                    </article>
 
-        </div>
+                    <article class="skill-group reveal">
+                        <h3>Backend Development</h3>
+                        <ul class="chips">
+                            <li>Django <span class="level">Basics</span></li>
+                            <li>Flask <span class="level">Basics</span></li>
+                            <li>FastAPI <span class="level">Basics</span></li>
+                        </ul>
+                    </article>
 
-    </section>
+                    <article class="skill-group reveal">
+                        <h3>Databases</h3>
+                        <ul class="chips">
+                            <li>MySQL</li>
+                            <li>MongoDB <span class="level">Basics</span></li>
+                        </ul>
+                    </article>
 
-    <!-- PROJECTS -->
+                    <article class="skill-group skill-group-wide reveal">
+                        <h3>Core Computer Science</h3>
+                        <ul class="chips">
+                            <li>Data Structures and Algorithms</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>DBMS</li>
+                            <li>Operating Systems</li>
+                            <li>Computer Networks</li>
+                            <li>Computer Architecture</li>
+                        </ul>
+                    </article>
 
-    <section class="projects" id="projects">
+                    <article class="skill-group reveal">
+                        <h3>Developer Tools</h3>
+                        <ul class="chips">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                    </article>
 
-        <h2>Projects</h2>
+                    <article class="skill-group reveal">
+                        <h3>AI Technologies</h3>
+                        <ul class="chips">
+                            <li>Generative AI</li>
+                        </ul>
+                    </article>
 
-        <div class="project-container">
+                    <article class="skill-group reveal">
+                        <h3>Cloud</h3>
+                        <ul class="chips">
+                            <li>Cloud Computing Fundamentals</li>
+                        </ul>
+                    </article>
 
-            <div class="project-card">
+                </div>
+            </div>
+        </section>
 
-                <h3>Research-HUB AI</h3>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <h2 id="experience-title" class="section-title">Experience</h2>
 
-                <p>
-                    AI-powered platform for intelligent discovery
-                    and organization of academic research papers
-                    using semantic search and vector databases.
+                <ol class="timeline">
+                    <li class="reveal">
+                        <article class="card">
+                            <h3>Artificial Intelligence Intern</h3>
+                            <p class="org">Intrainz</p>
+                            <p class="meta">November 2025 &ndash; January 2026 &nbsp;|&nbsp; Virtual</p>
+                            <ul class="bullets">
+                                <li>Explored fundamental concepts of Artificial Intelligence and Machine Learning through practical assignments.</li>
+                                <li>Worked on Python-based exercises involving data preprocessing and model development.</li>
+                                <li>Applied analytical and problem-solving techniques to understand AI applications and evaluate model outputs.</li>
+                            </ul>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title">Projects</h2>
+
+                <div class="project-grid">
+
+                    <article class="project-card reveal">
+                        <h3>ResearchHub AI</h3>
+                        <p class="project-desc">
+                            An AI-powered research paper management and analysis platform designed
+                            to help users organize, discover, and understand academic research papers.
+                        </p>
+                        <ul class="chips chips-small" aria-label="Technologies used">
+                            <li>React.js</li>
+                            <li>TypeScript</li>
+                            <li>FastAPI</li>
+                            <li>Groq Llama 3.3</li>
+                            <li>Vector Embeddings</li>
+                            <li>JWT Authentication</li>
+                        </ul>
+                        <ul class="bullets">
+                            <li>AI-assisted research paper analysis</li>
+                            <li>Semantic search using vector embeddings</li>
+                            <li>Groq Llama 3.3 integration for AI-powered assistance</li>
+                            <li>PDF upload and processing</li>
+                            <li>Workspace management</li>
+                            <li>Authentication and backend API integration</li>
+                        </ul>
+                        <a class="btn btn-outline btn-small" href="https://github.com/Nikitha-24300/ReseachHub-AI" target="_blank" rel="noopener noreferrer" aria-label="ResearchHub AI on GitHub (opens in a new tab)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            GitHub
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <h3>Smart Travel Planning System</h3>
+                        <p class="project-desc">
+                            A graph-based travel planning application that helps users identify
+                            optimized travel routes across buses, trains, and flights.
+                        </p>
+                        <ul class="chips chips-small" aria-label="Technologies used">
+                            <li>Python</li>
+                            <li>Graph Data Structures</li>
+                            <li>Dijkstra&rsquo;s Algorithm</li>
+                            <li>DFS</li>
+                        </ul>
+                        <ul class="bullets">
+                            <li>Dijkstra&rsquo;s algorithm for shortest-path calculation</li>
+                            <li>DFS for alternative route discovery</li>
+                            <li>Weighted graph representation of travel connections</li>
+                            <li>Route estimation and travel planning</li>
+                            <li>API-based and offline route estimation</li>
+                        </ul>
+                        <a class="btn btn-outline btn-small" href="https://github.com/Nikitha-24300/smart-travel-planning-system" target="_blank" rel="noopener noreferrer" aria-label="Smart Travel Planning System on GitHub (opens in a new tab)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            GitHub
+                        </a>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <h3>Student Course Registration System</h3>
+                        <p class="project-desc">
+                            A desktop-based application designed to manage student course
+                            registration and administrative activities.
+                        </p>
+                        <ul class="chips chips-small" aria-label="Technologies used">
+                            <li>Java</li>
+                            <li>Java Swing</li>
+                            <li>MySQL</li>
+                            <li>JDBC</li>
+                        </ul>
+                        <ul class="bullets">
+                            <li>Student and Admin login</li>
+                            <li>Separate dashboards for Student and Admin roles</li>
+                            <li>Course registration management</li>
+                            <li>MySQL database integration using JDBC</li>
+                            <li>Java Swing graphical interface</li>
+                        </ul>
+                        <a class="btn btn-outline btn-small" href="https://github.com/Nikitha-24300/StudentCourseRegistrationSystem" target="_blank" rel="noopener noreferrer" aria-label="Student Course Registration System on GitHub (opens in a new tab)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            GitHub
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education" aria-labelledby="education-title">
+            <div class="container">
+                <h2 id="education-title" class="section-title">Education</h2>
+
+                <ol class="timeline">
+
+                    <li class="reveal">
+                        <article class="card">
+                            <h3>Vasavi College of Engineering</h3>
+                            <p class="org">Bachelor of Engineering (B.E.) in Computer Science and Engineering</p>
+                            <p class="meta">2025 &ndash; 2028 &nbsp;|&nbsp; CGPA: 9.00 / 10</p>
+                        </article>
+                    </li>
+
+                    <li class="reveal">
+                        <article class="card">
+                            <h3>Government Polytechnic, Hyderabad</h3>
+                            <p class="org">Diploma in Computer Science and Engineering</p>
+                            <p class="meta">2022 &ndash; 2025 &nbsp;|&nbsp; CGPA: 9.80 / 10</p>
+                        </article>
+                    </li>
+
+                    <li class="reveal">
+                        <article class="card">
+                            <h3>Shree Sharadaa High School, Basar</h3>
+                            <p class="org">Secondary School Certificate (SSC)</p>
+                            <p class="meta">2022 &nbsp;|&nbsp; CGPA: 10.00 / 10</p>
+                        </article>
+                    </li>
+
+                </ol>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="section" id="achievements" aria-labelledby="achievements-title">
+            <div class="container">
+                <h2 id="achievements-title" class="section-title">Achievements</h2>
+
+                <div class="achievement-grid">
+
+                    <article class="achievement-feature reveal">
+                        <svg class="icon icon-large" aria-hidden="true"><use href="#i-award"/></svg>
+                        <div>
+                            <h3>1st Place &ndash; ServiceNow Co-Innovation Day Hackathon</h3>
+                            <p class="meta">2026</p>
+                            <p>
+                                Secured first place in the ServiceNow Co-Innovation Day Hackathon
+                                conducted at Vasavi College of Engineering, collaborating with a team
+                                to develop an innovative solution addressing a real-world problem.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-minor reveal">
+                        <h3>Gen-AI Forge Hackathon</h3>
+                        <p class="meta">2026</p>
+                        <p>Participant</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="section" id="certifications" aria-labelledby="certifications-title">
+            <div class="container">
+                <h2 id="certifications-title" class="section-title">Certifications &amp; Training</h2>
+
+                <ul class="cert-grid">
+
+                    <li class="cert-card reveal">
+                        <h3>The Joy of Computing Using Python</h3>
+                        <p>NPTEL</p>
+                        <p class="meta">Score: 88%</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Database Management Systems</h3>
+                        <p>NPTEL</p>
+                        <p class="meta">Score: 79%</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Introduction to Generative AI</h3>
+                        <p>IBM SkillsBuild</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Programming in Java</h3>
+                        <p>Infosys Springboard</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Digital Application Fundamentals (STEM)</h3>
+                        <p>NASSCOM</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Django Web Development</h3>
+                        <p>Self-learning</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Git &amp; GitHub</h3>
+                        <p>Self-learning</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>Introduction to Python</h3>
+                        <p>Infosys Springboard</p>
+                    </li>
+
+                    <li class="cert-card reveal">
+                        <h3>IBM SkillsBuild Masterclass</h3>
+                        <p>IBM SkillsBuild</p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Contact Me</h2>
+
+                <p class="contact-intro">
+                    I&rsquo;m looking for software development internship opportunities.
+                    Email is the quickest way to reach me.
                 </p>
 
-                <ul>
-                    <li>Semantic search implementation</li>
-                    <li>Vector database integration</li>
-                    <li>AI-based context retrieval</li>
+                <ul class="contact-grid">
+
+                    <li>
+                        <a class="contact-link" href="mailto:nikithalingapnor@gmail.com">
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                            <span>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">nikithalingapnor@gmail.com</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="contact-link" href="tel:+918520899670">
+                            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                            <span>
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 8520899670</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="contact-link" href="https://github.com/Nikitha-24300" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+                            <span>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/Nikitha-24300</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="contact-link" href="https://www.linkedin.com/in/nikitha-lingapnor-b49199294/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                            <span>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/nikitha-lingapnor-b49199294</span>
+                            </span>
+                        </a>
+                    </li>
+
                 </ul>
-
-                <a href="https://github.com/Nikitha-24300/ReseachHub-AI" target="_blank">
-                    GitHub
-                </a>
-
             </div>
+        </section>
 
-            <div class="project-card">
+    </main>
 
-                <h3>Smart Travel Planning System</h3>
-
-                <p>
-                    Graph-based intelligent travel planning application
-                    that computes optimized routes across buses,
-                    trains and flights.
-                </p>
-
-                <ul>
-                    <li>Dijkstra's Algorithm implementation</li>
-                    <li>DFS for alternative route discovery</li>
-                    <li>Real-time API integration</li>
-                    <li>Offline estimation mechanisms</li>
-                    <li>The system helps users choose the best route based on multiple preferences such as Fastest, Cheapest, Eco-Friendly, and Balanced travel while also providing travel analytics</li>
-                </ul>
-
-                 <a href="https://github.com/Nikitha-24300/smart-travel-planning-system" target="_blank">GitHub
-                </a>
-
-            </div>
-
-            
-
-
-            <div class="project-card">
-
-                <h3>Student Course Registration System</h3>
-
-                <p>
-                    Java Swing desktop application for managing
-                    student course registration with MySQL integration.
-                </p>
-
-                <ul>
-                    <li>Java Swing GUI</li>
-                    <li>JDBC connectivity</li>
-                    <li>Course registration management</li>
-                </ul>
-
-                <a href="https://github.com/Nikitha-24300/StudentCourseRegistrationSystem" target="_blank">
-                    GitHub
-                </a>
-
-            </div>
-
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Lingapnor Nikitha</p>
+            <a href="#home">Back to top</a>
         </div>
-
-    </section>
-
-    <!-- EDUCATION -->
-
-    <section class="education" id="education">
-
-        <h2>Education</h2>
-
-        <div class="edu-card">
-
-            <h3>Vasavi College of Engineering</h3>
-
-            <p>B.Tech in Computer Science and Engineering</p>
-            <p>2025 – 2028</p>
-            <p>CGPA: 9.04 / 10</p>
-
-        </div>
-
-        <div class="edu-card">
-
-            <h3>Government Polytechnic, Masab Tank</h3>
-
-            <p>Diploma in Computer Science and Engineering</p>
-            <p>Completed 2025</p>
-            <p>CGPA: 9.8 / 10</p>
-
-        </div>
-
-        <div class="edu-card">
-
-            <h3>Shree Sharada High School, Basar</h3>
-
-            <p>SSC</p>
-            <p>Completed in 2022</p>
-            <p>CGPA: 10 / 10</p>
-
-        </div>
-
-    </section>
-
-    <!-- CERTIFICATIONS -->
-
-    <section class="certifications" id="certifications">
-
-        <h2>Certifications</h2>
-
-        <div class="cert-container">
-
-            <div class="cert-card">
-                <h3>NPTEL - Joy of Computing with Python</h3>
-                <p>Score: 88%</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>NPTEL - Database Management Systems</h3>
-                <p>Score: 79%</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Introduction to Generative AI</h3>
-                <p>IBM SkillsBuild</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Artificial Intelligence Internship</h3>
-                <p>Intrainz</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Programming in Java</h3>
-                <p>Course Completion Certificate</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Introduction to Python</h3>
-                <p>Course Completion Certificate</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <div class="contact-links">
-
-            <a href="mailto:nikithalingapnor@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Email
-            </a>
-
-            <a href="https://github.com/Nikitha-24300" target="_blank">
-                <i class="fab fa-github"></i>
-                GitHub
-            </a>
-
-            <a href="https://www.linkedin.com/in/nikitha-lingapnor-b49199294/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                LinkedIn
-            </a>
-
-        </div>
-
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
 
-
 </html>
-
-</html>
-
